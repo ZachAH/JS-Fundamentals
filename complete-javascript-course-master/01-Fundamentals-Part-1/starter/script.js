@@ -129,30 +129,102 @@
 //     console.log('Someone else should drive!');
 // }
 
-const scoreDolphins = (88 + 91 + 50) /3; 
-const scoreKoalas = (88 + 91 + 50) /3;
-console.log(scoreKoalas, scoreDolphins); 
+// const scoreDolphins = (88 + 91 + 50) /3; 
+// const scoreKoalas = (88 + 91 + 50) /3;
+// console.log(scoreKoalas, scoreDolphins); 
 
-if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
-    console.log('Doplphins Win!!');
-} else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
-    console.log('Koalas Win!!');
-} else if (scoreDolphins === scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100) {
-    console.log('it is a tie!!');
-} else {
-    console.log('No one wins the trophy');
-}
+// if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+//     console.log('Doplphins Win!!');
+// } else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+//     console.log('Koalas Win!!');
+// } else if (scoreDolphins === scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100) {
+//     console.log('it is a tie!!');
+// } else {
+//     console.log('No one wins the trophy');
+// }
+
+// const day = 'thursday'
+
+// switch(day) {
+//     case 'monday': // day === 'monday'
+//     console.log('Plan course structure');
+//     console.log('Go to coding meetup');
+//     break;
+//    case 'tuesday': 
+//    console.log('Prepare theory videos');
+//    break;
+//    case 'wednesday': 
+//    case 'thursday': 
+//     console.log('Write code examples');
+//     break;
+//     case 'friday':
+//         console.log('Record videos');
+//         break;
+//     case 'saturday': 
+//     case 'sunday': 
+//     console.log('enjoy the weekend');  
+//     break;
+//     default: 
+//     console.log('not a valid day!');  
+// }
+
+
+// if (day === 'friday') {
+//     console.log('good job sonny');
+// } else if ( day === 'monday') {
+//     console.log('nice dog sonny');
+// } else {
+//     console.log('not a good day for sonny');
+// }
+
+//expressions
+// 3 + 4
+// 1991
+// true && false && !false
+
+
+// //statement
+// if (23 > 10) {
+//     const str = '23 is bigger'; //when ends with ; that is a statement 
+// }
+
+// console.log(`I'm ${2037 - 1991 }years old.`)
+
+// const age = 24;
+// age >= 18 ? console.log('I like to drink wine') : console.log('I like to drink water');// 
+
+// if age is greater or = 18 wine else water
+// const drink = age >= 18 ? 'wine' : 'water';
+// console.log(drink);
+
+// // code above is way easier to write than that below both do the same thing one is a ternary operator
+// let drink2;
+// if(age >= 18) {
+//     drink2 = 'wine';
+// } else {
+//     drink2 = 'water';
+// }
+// console.log(drink2);
+
+// console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`);
+
+//hint to calulate 20% of a value, simply mutliply by 20/100 = .02
+//value  >= 50 && <= 300
+
+
+const bill = 250;
+console.log(bill);
+const tip =  bill <=300 && bill >=50 ? Number(`${bill * 15/100}`) : Number(`${bill * 20/100 }`);
+console.log(tip);
+
+const totalBill =Number(`${bill + tip}`);
+console.log(totalBill);
+
+console.log(`The bill was ${bill}, the tip was ${tip}, the total bill was ${totalBill} dollars`);
 
 
 
-
-
-
-
-
-
-
-
+// const tip = bill >= 50 <= 300 ? console.log('15percent') : console.log('20percent');
 
 
 
