@@ -11,26 +11,42 @@
 // const private = 534;
 
 //created function logger
-function logger() {
-    console.log('My name is Zach');
-}
+// function logger() {
+//     console.log('My name is Zach');
+// }
 
-// calling / running / invoking function
-logger();
-logger();
-logger();
+// // calling / running / invoking function
+// logger();
+// logger();
+// logger();
 
-function fruitProcessor(apples, oranges) {
-    const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
-    return juice;
-}
+// function fruitProcessor(apples, oranges) {
+//     const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+//     return juice;
+// }
 
-// 5 and 0 are arugments
-const appleJuice = fruitProcessor(5, 0);
-console.log(appleJuice);
+// // 5 and 0 are arugments
+// const appleJuice = fruitProcessor(5, 0);
+// console.log(appleJuice);
 
-const appleOrangeJuice = fruitProcessor(2, 4);
-console.log(appleOrangeJuice);
+// const appleOrangeJuice = fruitProcessor(2, 4);
+// console.log(appleOrangeJuice);
 
-const water = fruitProcessor(0, 0);
-console.log(water);
+// const water = fruitProcessor(0, 0);
+// console.log(water);
+
+//function declaration
+// function calcAge1 (birthYear) {
+//     return 2037- birthYear;
+// }
+
+// const age1 = calcAge1(1991);
+// console.log(age1);
+
+// //function expression
+// const calcAge2 = function (birthYear) {
+//     return 2037- birthYear;
+// }
+
+// const age2 = calcAge2(1991);
+// console.log(age1, age2);
