@@ -204,6 +204,26 @@ const newLength = friends.push('Jay');
 console.log(friends);
 console.log(newLength);
 
+//adds element Jay to begging of array
+friends.unshift('John');
+console.log(friends);
+
+//Removes last element of array
+friends.pop();
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+//removes first element of array
+friends.shift();
+console.log(friends);
+
+//returns elements position in array
+console.log(friends.indexOf('Steven'));
+
+
+
+
 
 
 
