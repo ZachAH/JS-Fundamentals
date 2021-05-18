@@ -198,28 +198,46 @@
 // console.log(ages);
 
 
-const friends = ['Micheal', 'Steven', 'Peter'];
-//adds Jay to end of friends array
-const newLength = friends.push('Jay');
-console.log(friends);
-console.log(newLength);
+// const friends = ['Micheal', 'Steven', 'Peter'];
+// //adds Jay to end of friends array
+// const newLength = friends.push('Jay');
+// console.log(friends);
+// console.log(newLength);
 
-//adds element Jay to begging of array
-friends.unshift('John');
-console.log(friends);
+// //adds element Jay to begging of array
+// friends.unshift('John');
+// console.log(friends);
 
-//Removes last element of array
-friends.pop();
-const popped = friends.pop();
-console.log(popped);
-console.log(friends);
+// //Removes last element of array
+// friends.pop();
+// const popped = friends.pop();
+// console.log(popped);
+// console.log(friends);
 
-//removes first element of array
-friends.shift();
-console.log(friends);
+// //removes first element of array
+// friends.shift();
+// console.log(friends);
 
-//returns elements position in array
-console.log(friends.indexOf('Steven'));
+// //returns elements position in array if element is not in array will be -1
+// console.log(friends.indexOf('Steven'));
+// console.log(friends.indexOf('Bob'));
+
+// //if element is not in array it will return false
+// console.log(friends.includes('Steven'));
+// console.log(friends.includes('Bob'));
+
+// if (friends.includes('Steven')) {
+//     console.log('You have a friend named Steven');
+// }
+
+
+const calcTip = function(bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2
+}
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1], calcTip(bills[2]))];
+console.log(bills, tips);
 
 
 
