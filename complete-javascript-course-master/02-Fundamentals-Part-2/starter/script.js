@@ -362,35 +362,120 @@
 
 //coding challenge 3
 
-const mark = {
-    firstName: 'mark',
-    lastName: 'miller',
-    mass: 78,
-    height: 1.69,
-    calcBMI: function () {
-        this.BMI = this.mass / (this.height * this.height)
-        return this.BMI
-    },
+// const mark = {
+//     firstName: 'mark',
+//     lastName: 'miller',
+//     mass: 78,
+//     height: 1.69,
+//     calcBMI: function () {
+//         this.BMI = this.mass / (this.height * this.height)
+//         return this.BMI
+//     },
+// }
+
+// console.log(mark.calcBMI());
+
+// const john = {
+//     firstName: 'john',
+//     lastName: 'smith',
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function () {
+//         this.BMI = this.mass / (this.height * this.height)
+//         return this.BMI
+//     },
+// }
+
+// console.log(john.calcBMI());
+
+
+// if (john.BMI > mark.BMI) {
+//     console.log(`(${john.BMI}) john's BMI is higher than (${mark.BMI}) marks BMI`);
+// } else {
+//     console.log(`(${mark.BMI}) marks's BMI is higher than (${john.BMI}) johns BMI`);
+// }
+
+
+
+
+
+//  ITERATION THE FOR LOOP
+
+
+//will keep looping and adding one to rep until 10 is reached
+// for loop keeps running while condition is true
+// for(let rep = 1; rep <= 10; rep++) {
+//     console.log(`Lifting weights repetition ${rep}`);
+// }
+
+
+
+
+
+// looping through arrays backwards and loops in Loops
+// const jonas = [
+//     'jonas',
+//     'Schedtmann',
+//     2037 - 1991,
+//     'teacher',
+//     ['Micheal','Peter', 'Steven']
+// ];
+
+// 0, 1, ....4
+// 4, 3, ...0
+
+
+// // looping through array backwards until element 0
+// for(let i = jonas.length -1; i >= 0; i--) {
+//     console.log(i, jonas[i]);
+// }
+
+// for ( let exercise = 1; exercise < 4; exercise++) {
+//     console.log(`-----starting exercise ${exercise}`)
+
+//     for (let rep = 1; rep < 6; rep++) {
+//         console.log(`Exercise ${exercise} Lifting Weight Repition ${rep}`);
+//     }
+// }
+
+
+
+
+// WHILE LOOPS
+
+// for (let rep =1; rep <= 10; rep++) {
+//     console.log(`Lifting shit repetition ${rep}`);
+// }
+
+
+// let rep = 1;
+// while (rep <= 10) {
+//     console.log(` WHILE: Lifting shit repetition ${rep}`);
+//     rep++;
+// }
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+
+// while (dice  !== 6) {
+//     console.log(`You rolled a ${dice}`);
+//     dice = Math.trunc(Math.random() * 6) + 1;
+//     if (dice === 6) console.log('Loop is about to end...');
+// }
+
+const calcTip = function(bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i]);
 }
 
-console.log(mark.calcBMI());
-
-const john = {
-    firstName: 'john',
-    lastName: 'smith',
-    mass: 92,
-    height: 1.95,
-    calcBMI: function () {
-        this.BMI = this.mass / (this.height * this.height)
-        return this.BMI
-    },
-}
-
-console.log(john.calcBMI());
+console.log(bills, tips, totals);
 
 
-if (john.BMI > mark.BMI) {
-    console.log(`(${john.BMI}) john's BMI is higher than (${mark.BMI}) marks BMI`);
-} else {
-    console.log(`(${mark.BMI}) marks's BMI is higher than (${john.BMI}) johns BMI`);
-}
+
