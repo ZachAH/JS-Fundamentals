@@ -231,13 +231,48 @@
 // }
 
 
-const calcTip = function(bill) {
-    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2
-}
+// const calcTip = function(bill) {
+//     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2
+// }
 
-const bills = [125, 555, 44];
-const tips = [calcTip(bills[0]), calcTip(bills[1], calcTip(bills[2]))];
-console.log(bills, tips);
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1], calcTip(bills[2]))];
+// console.log(bills, tips);
+
+
+
+
+
+
+
+
+
+
+
+
+// Objects
+    // key is firstName and value is 'Jonas' ect. this is called object literal syntax
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Micheal', 'Peter', 'Steven']
+};
+console.log(jonas);
+
+//DOT NOTATION
+console.log(jonas.lastName);
+//BRACKET NOTATION
+console.log(jonas['lastName']);
+
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+
+
 
 
 
