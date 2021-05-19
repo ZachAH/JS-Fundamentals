@@ -300,17 +300,17 @@
 //OBJECT Methods any function thats attached to an object is a method 
 
 
-const jonas = {
-    firstName: 'Jonas',
-    lastName: 'Schedtmann',
-    //integer value
-    birthyear: 1991,
-    //string value
-    job: 'teacher',
-    //array value
-    friends: ['Micheal', 'Peter', 'Steven'],
-    //boolean value
-    hasDriversLicense: true,
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schedtmann',
+//     //integer value
+//     birthyear: 1991,
+//     //string value
+//     job: 'teacher',
+//     //array value
+//     friends: ['Micheal', 'Peter', 'Steven'],
+//     //boolean value
+//     hasDriversLicense: true,
     //function value
     // calcAge: function(birthyear) {
     //     return 2037 - birthyear;
@@ -322,13 +322,75 @@ const jonas = {
     //     return 2037 - this.birthyear;
     // }
 
-    calcAge: function() {
-        this.age = 2037 - this.birthyear;
-        return this.age;
-    }
-};
+//     calcAge: function() {
+//         this.age = 2037 - this.birthyear;
+//         return this.age;
+//     },
+    
+//     // "jonas is a 46-year old teacher, and he has a/no driver license"
+//     //object method to get the summary
+//     getSummary: function () {
+//         return `${this.firstName} is a ${this.calcAge()} year old ${this.job} and he 
+//         has ${this.hasDriversLicense ? 'a' : 'no'} drivers license.`
+//         //ternary operator above
+//     }
+// };
 
-console.log(jonas.calcAge());
+// console.log(jonas.calcAge());
 
-console.log(jonas.age);
-// console.log((jonas['calcAge'](1991)));
+// console.log(jonas.age);
+// // console.log((jonas['calcAge'](1991)));
+
+
+// // "jonas is a 46-year old teacher, and he has a/no driver license"
+
+
+// // if (jonas.hasDriversLicense) {
+// // console.log(`${jonas.firstName} is a ${jonas.age} year old ${jonas.job} and he has a drivers license`); 
+
+// // } else {
+// //     console.log(`${jonas.firstName} is a ${jonas.age} year old ${jonas.job} and he has no fricking drivers license`); 
+// // }
+
+// console.log(jonas.getSummary());
+
+
+
+
+
+
+
+//coding challenge 3
+
+const mark = {
+    firstName: 'mark',
+    lastName: 'miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.BMI = this.mass / (this.height * this.height)
+        return this.BMI
+    },
+}
+
+console.log(mark.calcBMI());
+
+const john = {
+    firstName: 'john',
+    lastName: 'smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.BMI = this.mass / (this.height * this.height)
+        return this.BMI
+    },
+}
+
+console.log(john.calcBMI());
+
+
+if (john.BMI > mark.BMI) {
+    console.log(`(${john.BMI}) john's BMI is higher than (${mark.BMI}) marks BMI`);
+} else {
+    console.log(`(${mark.BMI}) marks's BMI is higher than (${john.BMI}) johns BMI`);
+}
