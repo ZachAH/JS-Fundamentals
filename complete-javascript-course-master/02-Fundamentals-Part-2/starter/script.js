@@ -252,48 +252,83 @@
 
 // Objects
     // key is firstName and value is 'Jonas' ect. this is called object literal syntax
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schedtmann',
+//     age: 2037 - 1991,
+//     job: 'teacher',
+//     friends: ['Micheal', 'Peter', 'Steven']
+// };
+// console.log(jonas);
+
+// //DOT NOTATION
+// console.log(jonas.lastName);
+// //BRACKET NOTATION
+// console.log(jonas['lastName']);
+
+
+// const nameKey = 'Name';
+// console.log(jonas['first' + nameKey]);
+// console.log(jonas['last' + nameKey]);
+
+
+// // retrieving elements from an object
+// const interestedIn = prompt("What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends");
+
+
+// if(jonas[interestedIn]) {
+//     console.log(jonas[interestedIn]);
+// } else {
+//     console.log('What are you doing?');
+// }
+
+// // adding elements to object using bracket or dot notaion
+// jonas.location = 'Portugal';
+// jonas['twitter'] = '@jonasSchem';
+// console.log(jonas);
+
+// console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is called ${jonas.friends[0]}`);
+
+
+
+
+
+
+
+
+
+//OBJECT Methods any function thats attached to an object is a method 
+
+
 const jonas = {
     firstName: 'Jonas',
     lastName: 'Schedtmann',
-    age: 2037 - 1991,
+    //integer value
+    birthyear: 1991,
+    //string value
     job: 'teacher',
-    friends: ['Micheal', 'Peter', 'Steven']
+    //array value
+    friends: ['Micheal', 'Peter', 'Steven'],
+    //boolean value
+    hasDriversLicense: true,
+    //function value
+    // calcAge: function(birthyear) {
+    //     return 2037 - birthyear;
+    // }
+
+    //this is reference to the object itself aka jonas
+    // calcAge: function() {
+    //     console.log(this);
+    //     return 2037 - this.birthyear;
+    // }
+
+    calcAge: function() {
+        this.age = 2037 - this.birthyear;
+        return this.age;
+    }
 };
-console.log(jonas);
 
-//DOT NOTATION
-console.log(jonas.lastName);
-//BRACKET NOTATION
-console.log(jonas['lastName']);
+console.log(jonas.calcAge());
 
-
-const nameKey = 'Name';
-console.log(jonas['first' + nameKey]);
-console.log(jonas['last' + nameKey]);
-
-
-// retrieving elements from an object
-const interestedIn = prompt("What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends");
-
-
-if(jonas[interestedIn]) {
-    console.log(jonas[interestedIn]);
-} else {
-    console.log('What are you doing?');
-}
-
-// adding elements to object using bracket or dot notaion
-jonas.location = 'Portugal';
-jonas['twitter'] = '@jonasSchem';
-console.log(jonas);
-
-console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is called ${jonas.friends[0]}`);
-
-
-
-
-
-
-
-
-
+console.log(jonas.age);
+// console.log((jonas['calcAge'](1991)));
