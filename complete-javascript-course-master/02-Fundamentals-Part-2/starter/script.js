@@ -271,6 +271,8 @@ const nameKey = 'Name';
 console.log(jonas['first' + nameKey]);
 console.log(jonas['last' + nameKey]);
 
+
+// retrieving elements from an object
 const interestedIn = prompt("What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends");
 
 
@@ -279,6 +281,14 @@ if(jonas[interestedIn]) {
 } else {
     console.log('What are you doing?');
 }
+
+// adding elements to object using bracket or dot notaion
+jonas.location = 'Portugal';
+jonas['twitter'] = '@jonasSchem';
+console.log(jonas);
+
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is called ${jonas.friends[0]}`);
+
 
 
 
