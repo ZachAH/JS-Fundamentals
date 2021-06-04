@@ -29,6 +29,19 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20.00',
+    address,
+  }) {
+    console.log(`Order recieved! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
+  },
+
+  orderPasta: function(ing1, ing2, ing3) {
+    console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}`);
+  }
 };
 
 //pulling elements from array
@@ -91,3 +104,37 @@ console.log(fri);
 // //Default Values
 // const [p=1, q=1, r=1] = [8, 9];
 // console.log(p,q,r);
+
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+//... spread operator 
+
+//creating completly new array using spread operator
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+//copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+
+//join 2 arrays or more together
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu);
+
+//Iterables: arrays, strings, maps, sets. NOT objects
+const str = 'Jonas';
+const letters = [...str, '', 'S.'];
+console.log(letters);
+
+//Real World Example
+const ingredients = [prompt('Let\'s make pasta! Ingredient 1?'),prompt('Let\'s make pasta! Ingredient 2?'), prompt('Let\'s make pasta! Ingredient 3?')];
+console.log(ingredients);
+
+restaurant.orderPasta(...ingredients);
+
+//Objects
+
+
