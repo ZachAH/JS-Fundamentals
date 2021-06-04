@@ -12,10 +12,6 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  order: function(starterIndex, mainIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-  },
-
   openingHours: {
     thu: {
       open: 12,
@@ -30,41 +26,68 @@ const restaurant = {
       close: 24,
     },
   },
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 };
 
-const arr = [2, 3, 4];
-const a = arr[0];
-const b = arr[1];
-const c = arr[2];
+//pulling elements from array
+const {name, openingHours, categories} = restaurant;
+console.log(name, openingHours, categories);
 
-//destructuring array from right side 
-const [x, y, z] = arr;
-console.log(x, y, z);
+// //giving new varible names to elements in array
+const {name: resturauntName, openingHours: hours, categories: tags} = restaurant;
+console.log(resturauntName, hours, tags);
+
+// //very helful with third party api's Default Values
+const { menue = [], starterMenu: starters = []} = restaurant;
+console.log(menue, starters);
+
+//mutating varibles
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+
+({ a, b } = obj);
+console.log(a, b);
+
+//NESTED OBJECTS
+const { fri } = openingHours;
+console.log(fri);
+
+// const arr = [2, 3, 4];
+// const a = arr[0];
+// const b = arr[1];
+// const c = arr[2];
+
+// //destructuring array from right side
+// const [x, y, z] = arr;
+// console.log(x, y, z);
 
 //first skips second element in array and then gets the third
-let [main, , secondary] = restaurant.categories;
-console.log(main, secondary);
-
-//switching varibles
-// const temp = main;
-// main = secondary;
-// secondary = temp;
+// let [main, , secondary] = restaurant.categories;
 // console.log(main, secondary);
 
+// //switching varibles
+// // const temp = main;
+// // main = secondary;
+// // secondary = temp;
+// // console.log(main, secondary);
 
-[main, secondary] = [secondary, main]
-console.log(main, secondary);
+// [main, secondary] = [secondary, main]
+// console.log(main, secondary);
 
-//recieve 2 return values from a function
-const [starter, mainCourse] = restaurant.order(2, 0);
-console.log(starter, mainCourse);
+// //recieve 2 return values from a function
+// const [starter, mainCourse] = restaurant.order(2, 0);
+// console.log(starter, mainCourse);
 
+// //nested destructuring
+// const nested = [2, 4, [5, 6]];
+// // const [i, , j] = nested;
+// // console.log(i, j);
+// const [i, , [j, k]] = nested;
+// console.log(i, j, k);
 
-//nested destructuring
-const nested = [2, 4, [5, 6]];
-// const [i, , j] = nested;
-// console.log(i, j);
-const [i, , [j, k]] = nested;
-console.log(i, j, k);
-
-//Default Values
+// //Default Values
+// const [p=1, q=1, r=1] = [8, 9];
+// console.log(p,q,r);
