@@ -149,6 +149,7 @@
 
 // || or
 // Use ANY data type, return ANY data type, short circuiting
+console.log('---- OR ----');
 console.log(3 || 'Jonas');
 console.log('' || 'Jonas');
 console.log(true || 0);
@@ -158,6 +159,20 @@ console.log(undefined || null);
 // falsey, falsey, falsey, truthy
 //the result is true if first operant is true 
 console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+//short circuits when the first operator is false opposite of || or operator
+console.log('---- AND ----');
+console.log(0 && 'Jonas');
+console.log(7 && 'Jonas');
+
+//prints out null because first falsey value then short circuits
+console.log('Hello' && 23 && null && 'jonas');
+
+// ?? operator nullish coalish
+// Nullish: null and undefined (NOT 0 or '')
+//only nullish values will short circuit 
+
+
 
 
 
