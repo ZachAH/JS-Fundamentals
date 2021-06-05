@@ -144,3 +144,10 @@ restaurantCopy.name = 'Ristorante Roma';
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
 
+//SPRED, because on right side of =
+// const arr = []
+
+// || or
+// Use ANY data type, return ANY data type, short circuiting
+console.log(3 || 'Jonas');
+
