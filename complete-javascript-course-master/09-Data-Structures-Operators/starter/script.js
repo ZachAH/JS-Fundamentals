@@ -1,48 +1,52 @@
-// // 'use strict';
+'use strict';
 
-// // // Data needed for a later exercise
-// // const flights =
-// //   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+const hours =  {
+  thu: {
+    open: 12,
+    close: 22,
+  },
+  fri: {
+    open: 11,
+    close: 23,
+  },
+  sat: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
 
-// // // Data needed for first part of the section
-// // const restaurant = {
-// //   name: 'Classico Italiano',
-// //   location: 'Via Angelo Tavanti 23, Firenze, Italy',
-// //   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-// //   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-// //   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+// Data needed for a later exercise
+const flights =
+  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
-// //   openingHours: {
-// //     thu: {
-// //       open: 12,
-// //       close: 22,
-// //     },
-// //     fri: {
-// //       open: 11,
-// //       close: 23,
-// //     },
-// //     sat: {
-// //       open: 0, // Open 24 hours
-// //       close: 24,
-// //     },
-// //   },
-// //   order: function (starterIndex, mainIndex) {
-// //     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-// //   },
+// Data needed for first part of the section
+const restaurant = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  //ES6 advances object litrals
+  hours,
 
-// //   orderDelivery: function ({
-// //     starterIndex = 1,
-// //     mainIndex = 0,
-// //     time = '20.00',
-// //     address,
-// //   }) {
-// //     // console.log(`Order recieved! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
-// //   },
+  
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 
-// //   orderPasta: function(ing1, ing2, ing3) {
-// //     // console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}`);
-// //   }
-// // };
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20.00',
+    address,
+  }) {
+    // console.log(`Order recieved! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
+  },
+
+  orderPasta: function(ing1, ing2, ing3) {
+    // console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}`);
+  }
+};
 
 // // //pulling elements from array
 // // // const {name, openingHours, categories} = restaurant;
@@ -198,80 +202,80 @@
 // Test data for 6.: First, use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. 
 // Then, call the function again with players from game.score
 
-const game = {
-  team1: 'Bayern Munich',
-  team2: 'Borrussia Dortmund',
-  players: [
-  [
-  'Neuer',
-  'Pavard',
-  'Martinez',
-  'Alaba',
-  'Davies',
-  'Kimmich',
-  'Goretzka',
-  'Coman',
-  'Muller',
-  'Gnarby',
-  'Lewandowski',
-  ],
-  [
-  'Burki',
-  'Schulz',
-  'Hummels',
-  'Akanji',
-  'Hakimi',
-  'Weigl',
-  'Witsel',
-  'Hazard',
-  'Brandt',
-  'Sancho',
-  'Gotze',
-  ],
-  ],
-  score: '4:0',
-  scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
-  'Hummels'],
-  date: 'Nov 9th, 2037',
-  odds: {
-  team1: 1.33,
-  x: 3.25,
-  team2: 6.5,
-  },
-  };
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//   [
+//   'Neuer',
+//   'Pavard',
+//   'Martinez',
+//   'Alaba',
+//   'Davies',
+//   'Kimmich',
+//   'Goretzka',
+//   'Coman',
+//   'Muller',
+//   'Gnarby',
+//   'Lewandowski',
+//   ],
+//   [
+//   'Burki',
+//   'Schulz',
+//   'Hummels',
+//   'Akanji',
+//   'Hakimi',
+//   'Weigl',
+//   'Witsel',
+//   'Hazard',
+//   'Brandt',
+//   'Sancho',
+//   'Gotze',
+//   ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
+//   'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds: {
+//   team1: 1.33,
+//   x: 3.25,
+//   team2: 6.5,
+//   },
+//   };
 
 
-  //1. creating one varible for each of two arrays by destructuring arrays
-  const [players1, players2] = game.players
-  console.log(players1, players2);
+//   //1. creating one varible for each of two arrays by destructuring arrays
+//   const [players1, players2] = game.players
+//   console.log(players1, players2);
 
-  //2. create var with goalkeepers and one for remaining players whith spread operator
-  const [gk, ...fieldPlayers] = players1;
-  console.log(gk, fieldPlayers);
+//   //2. create var with goalkeepers and one for remaining players whith spread operator
+//   const [gk, ...fieldPlayers] = players1;
+//   console.log(gk, fieldPlayers);
 
-  //3. create varible with all players from both arrays using spread operator
-  const allPlayers =[...players1, ...players2];
-  console.log(allPlayers);
+//   //3. create varible with all players from both arrays using spread operator
+//   const allPlayers =[...players1, ...players2];
+//   console.log(allPlayers);
 
-  //4.
-  const players1Final = [...players1, 'Thiago', 'Coutino', 'Periscic'];
+//   //4.
+//   const players1Final = [...players1, 'Thiago', 'Coutino', 'Periscic'];
 
-  //5.
-  const {odds: {team1, x: draw, team2}} = game;
-  console.log(team1, draw, team2);
+//   //5.
+//   const {odds: {team1, x: draw, team2}} = game;
+//   console.log(team1, draw, team2);
 
-  //6.
-  const printGoals = function(...players) {
-    console.log(`${players.length} goals were scored`);
-  };
+//   //6.
+//   const printGoals = function(...players) {
+//     console.log(`${players.length} goals were scored`);
+//   };
 
-  // printGoals('Davis', 'Muller', 'Lewandowski', 'Kimmich');
-  // printGoals('Davis', 'Muller');
-  printGoals(...game.scored);
+//   // printGoals('Davis', 'Muller', 'Lewandowski', 'Kimmich');
+//   // printGoals('Davis', 'Muller');
+//   printGoals(...game.scored);
 
-  //7.
-  team1 < team2 && console.log('Team 1 is more likely to win');
-  team1 > team2  
+//   //7.
+//   team1 < team2 && console.log('Team 1 is more likely to win');
+//   team1 > team2  
 
 
 
