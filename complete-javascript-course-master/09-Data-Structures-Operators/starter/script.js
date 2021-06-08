@@ -252,7 +252,26 @@ const game = {
   //3. create varible with all players from both arrays using spread operator
   const allPlayers =[...players1, ...players2];
   console.log(allPlayers);
-  
+
+  //4.
+  const players1Final = [...players1, 'Thiago', 'Coutino', 'Periscic'];
+
+  //5.
+  const {odds: {team1, x: draw, team2}} = game;
+  console.log(team1, draw, team2);
+
+  //6.
+  const printGoals = function(...players) {
+    console.log(`${players.length} goals were scored`);
+  };
+
+  // printGoals('Davis', 'Muller', 'Lewandowski', 'Kimmich');
+  // printGoals('Davis', 'Muller');
+  printGoals(...game.scored);
+
+  //7.
+  team1 < team2 && console.log('Team 1 is more likely to win');
+  team1 > team2  
 
 
 
